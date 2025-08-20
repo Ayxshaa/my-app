@@ -2,58 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ====== Font Face for Clash Display ====== */
+/* ====== Font Face for Josefin Sans ====== */
 @font-face {
-  font-family: 'Clash Display';
-  src: url('/fonts/ClashDisplay-Bold.otf') format('opentype');
-  font-weight: 700;
+  font-family: 'Josefin';
+  src: url('/Josefin_Sans/static/JosefinSans-Thin.ttf') format('truetype');
+  font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Clash Display';
-  src: url('/fonts/ClashDisplay-Semibold.otf') format('opentype');
-  font-weight: 600;
+  font-family: 'Josefin';
+  src: url('/Josefin_Sans/static/JosefinSans-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Josefin';
+  src: url('/Josefin_Sans/static/JosefinSans-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Clash Display';
-  src: url('/fonts/ClashDisplay-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
+  font-family: 'Josefin';
+  src: url('/Josefin_Sans/static/JosefinSans-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
 }
 
 @font-face {
-  font-family: 'Clash Display';
-  src: url('/fonts/ClashDisplay-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Clash Display';
-  src: url('/fonts/ClashDisplay-Light.otf') format('opentype');
+  font-family: 'Josefin';
+  src: url('/Josefin_Sans/static/JosefinSans-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Clash Display';
-  src: url('/fonts/ClashDisplay-Extralight.otf') format('opentype');
-  font-weight: 200;
+  font-family: 'Josefin';
+  src: url('/Josefin_Sans/static/JosefinSans-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Josefin';
+  src: url('/Josefin_Sans/static/JosefinSans-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
-  font-family: 'ClashDisplay';
-  src: url('/fonts/OTF/ClashDisplay-Bold.otf') format('opentype');
+  font-family: 'Josefin';
+  src: url('/Josefin_Sans/static/JosefinSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Josefin';
+  src: url('/Josefin_Sans/static/JosefinSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Josefin';
+  src: url('/Josefin_Sans/static/JosefinSans-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Josefin';
+  src: url('/Josefin_Sans/static/JosefinSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Josefin';
+  src: url('/Josefin_Sans/static/JosefinSans-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Josefin';
+  src: url('/Josefin_Sans/static/JosefinSans-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Josefin';
+  src: url('/Josefin_Sans/static/JosefinSans-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
 /* ====== Global Theme Variables ====== */
 :root {
-  /* Light Mode */
   --bg-color: #F5F7FA;
   --text-color: #2D2D2D;
   --primary: #9B87F5;
@@ -63,7 +112,6 @@
 }
 
 .dark {
-  /* Dark Mode */
   --bg-color: #1E1E2F;
   --text-color: #E4E4E4;
   --primary: #A69DFF;
@@ -72,7 +120,6 @@
   --bubble-ai: #2E2E42;
 }
 
-/* ====== Mood Colors ====== */
 :root {
   --mood-happy: #FFE082;
   --mood-sad: #90CAF9;
@@ -84,7 +131,7 @@
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: 'Clash Display', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   transition: background-color 0.4s ease, color 0.4s ease;
   min-height: 100vh;
 }
@@ -105,24 +152,11 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* ====== Mood Background Utility ====== */
-.mood-happy {
-  background-color: var(--mood-happy) !important;
-}
+.mood-happy { background-color: var(--mood-happy) !important; }
+.mood-sad { background-color: var(--mood-sad) !important; }
+.mood-anxious { background-color: var(--mood-anxious) !important; }
+.mood-neutral { background-color: var(--mood-neutral) !important; }
 
-.mood-sad {
-  background-color: var(--mood-sad) !important;
-}
-
-.mood-anxious {
-  background-color: var(--mood-anxious) !important;
-}
-
-.mood-neutral {
-  background-color: var(--mood-neutral) !important;
-}
-
-/* ====== Smooth Mode Toggle ====== */
 .transition-theme {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
